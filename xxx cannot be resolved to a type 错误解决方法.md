@@ -1,4 +1,4 @@
-### xxx cannot be resolved to a type
+### [xxx cannot be resolved to a type](http://blog.csdn.net/testcs_dn/article/details/39643119/)
 
 *   （1）jdk不匹配（或不存在） 
 
