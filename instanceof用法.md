@@ -42,14 +42,14 @@ public class TestTwo {
 		B b = null;
 		boolean res;
 
-		System.out.println("instanceoftest test case 1: ------------------");
+		System.out.println(" ---instanceoftest test case 1: ---");
 		res = a instanceof A;
 		System.out.println("a instanceof A: " + res);
 
 		res = b instanceof B;
 		System.out.println("b instanceof B: " + res);
 
-		System.out.println("/ninstanceoftest test case 2: ------------------");
+		System.out.println("/n ---instanceoftest test case 2: ---");
 		a = new B();
 		b = new B();
 
@@ -65,7 +65,7 @@ public class TestTwo {
 		res = b instanceof B;
 		System.out.println("b instanceof B: " + res);
 
-		System.out.println("/ninstanceoftest test case 3: ------------------");
+		System.out.println("/n ---instanceoftest test case 3: ---");
 		B b2 = (C) new C();
 
 		res = b2 instanceof A;
