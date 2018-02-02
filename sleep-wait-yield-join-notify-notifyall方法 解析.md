@@ -42,3 +42,18 @@
 
          4 waite()和notify()必须在synchronized函数或synchronized　block中进行调用。如果在non-synchronized函数或non-synchronized　block中进行调用，
 虽然能编译通过，但在运行时会发生IllegalMonitorStateException的异常。
+
+------------
+
+notify&notify补充
+------------
+
+当一个线程进入wait之后，就必须等其他线程notify/notifyall,使用notifyall，可以唤醒
+
+所有处于wait状态的线程，使其重新进入锁的争夺队列中，而notify只能唤醒一个。注意,任何时候只有一个线程可以获得锁，也就是说只有一个线程可以运行
+
+synchronized 中的代码，notifyall只是让处于wait的线程重新拥有锁的争夺权，但是只会有一个获得锁并执行。
+
+#### [notify只会通知一个在等待的对象，而notifyAll会通知所有在等待的对象，并且所有对象都会继续运行](http://www.jb51.net/article/92473.htm)
+
+#### ]notify用得不好容易导致死锁,大部分情况还是是用notifyall](http://www.jb51.net/article/36657.htm)
