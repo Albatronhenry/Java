@@ -56,3 +56,5 @@ synchronized 中的代码，notifyall只是让处于wait的线程重新拥有锁
 #### [notify只会通知一个在等待的对象，而notifyAll会通知所有在等待的对象，并且所有对象都会继续运行](http://www.jb51.net/article/92473.htm)
 
 #### [notify用得不好容易导致死锁,大部分情况还是是用notifyall](http://www.jb51.net/article/36657.htm)
+
+![wait-notify-notifyall](https://github.com/Albatronhenry/UploadFile/blob/master/pic/wait-notify-notifyall.png)
