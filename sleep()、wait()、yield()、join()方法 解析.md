@@ -1,3 +1,4 @@
+### [sleep()、wait()、yield()、join()方法 解析](http://blog.csdn.net/yangyan19870319/article/details/6205312)
 *   1.sleep()方法
 
 　　在指定时间内让当前正在执行的线程暂停执行，但不会释放“锁标志”。不推荐使用。
