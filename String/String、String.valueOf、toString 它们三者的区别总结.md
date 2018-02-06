@@ -61,7 +61,7 @@ public static String valueOf(Object obj){return (obj==null) ? "null" : obj.toStr
 
 ```
 
-为什么String.valueOf(null)，会走到valueOf(char[])这个重载，而不是其他重载呢？
+[为什么String.valueOf(null)，会走到valueOf(char[])这个重载，而不是其他重载呢？](http://blog.csdn.net/yangzhaomuma/article/details/51173138)
 -------------------------------------------------------------------------
 
 因为java中对重载的匹配是，当重载都能匹配的时候，优先选择范围小，精度高的方法，因此，它自动重载了char[]这个方法。
