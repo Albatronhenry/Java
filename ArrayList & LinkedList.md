@@ -1,4 +1,5 @@
 [ArrayList & LinkedList]()
+
 ArrayList和LinkedList的区别有以下几点：
 
         1. ArrayList是实现了基于动态数组的数据结构，而LinkedList是基于链表的数据结构；
