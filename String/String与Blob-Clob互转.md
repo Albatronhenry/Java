@@ -1,4 +1,4 @@
-[String与Blob-Clob互转.md](https://www.cnblogs.com/alex-blog/articles/2793424.html)
+[String与Blob-Clob互转](https://www.cnblogs.com/alex-blog/articles/2793424.html)
 ```java
 package gov.test;
 import java.sql.Blob;
