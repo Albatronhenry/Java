@@ -1,4 +1,4 @@
-[java 判断字符串是否为空的四种方法:](https://www.cnblogs.com/misybing/p/4833447.html)
+[java 判断字符串是否为空的普通方法:](https://www.cnblogs.com/misybing/p/4833447.html)
 
 * 方法一: 最多人使用的一个方法, 直观, 方便, 但效率很低:
 
@@ -58,3 +58,52 @@
    可以假设，如果str 是NULL, 他就不是一个字符串， NULL代表声明了一个空对象，根本就不是一个字符串。所以他就没有 equals() 这个方法，
    自然就报错了。而你写成 "".equals(str); 就不会有这个问题 ，因为 "" 是个字符串，有equals() 这个方法。
 
+### 上面方法只能简单处理一般为空，在实际开发中，会出现NPE异常，使用工具类可以解决一般为空判断的NPE异常:
+
+[StringUtils工具类的常用方法参考链接（isNotEmpty isNotBlank等）](https://blog.csdn.net/szwangdf/article/details/4075256)
+
+下面分别对一些常用方法做简要介绍：
+
+1. public static boolean isEmpty(String str)    判断某字符串是否为空，为空的标准是 str==null 或 str.length()==0    
+下面是 StringUtils 判断是否为空的示例： 
+```java
+StringUtils.isEmpty(null) = true
+StringUtils.isEmpty("") = true 
+StringUtils.isEmpty(" ") = false //注意在 StringUtils 中空格作非空处理
+StringUtils.isEmpty("   ") = false
+StringUtils.isEmpty("bob") = false
+StringUtils.isEmpty(" bob ") = false 
+```
+ 
+2. public static boolean isNotEmpty(String str)    判断某字符串是否非空，等于 !isEmpty(String str)    下面是示例： 
+```java
+StringUtils.isNotEmpty(null) = false      
+StringUtils.isNotEmpty("") = false      
+StringUtils.isNotEmpty(" ") = true      
+StringUtils.isNotEmpty("         ") = true      
+StringUtils.isNotEmpty("bob") = true      
+StringUtils.isNotEmpty(" bob ") = true
+```
+3. public static boolean isBlank(String str)    判断某字符串是否为空或长度为0或由空白符(whitespace) 构成   下面是示例：  
+```java
+StringUtils.isBlank(null) = true      
+StringUtils.isBlank("") = true      
+StringUtils.isBlank(" ") = true      
+StringUtils.isBlank("        ") = true      
+StringUtils.isBlank("/t /n /f /r") = true   //对于制表符、换行符、换页符和回车符 
+StringUtils.isBlank()   //均识为空白符      
+StringUtils.isBlank("/b") = false   //"/b"为单词边界符      
+StringUtils.isBlank("bob") = false      
+StringUtils.isBlank(" bob ") = false 
+```
+4. public static boolean isNotBlank(String str)    判断某字符串是否不为空且长度不为0且不由空白符(whitespace) 构成，等于 !isBlank(String str)    下面是示例：
+```java
+StringUtils.isNotBlank(null) = false      
+StringUtils.isNotBlank("") = false      
+StringUtils.isNotBlank(" ") = false      
+StringUtils.isNotBlank("         ") = false      
+StringUtils.isNotBlank("/t /n /f /r") = false      
+StringUtils.isNotBlank("/b") = true      
+StringUtils.isNotBlank("bob") = true      
+StringUtils.isNotBlank(" bob ") = true 
+```
