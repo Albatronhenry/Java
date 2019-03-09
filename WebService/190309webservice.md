@@ -37,9 +37,9 @@ public class HelloWorldClient {
 
 ```
 控制台输出，测试通过：
-
+```console
 Hello, world, from henry
-
+```
 
 2.IDEA实现调用天气查询ws [参考](https://blog.csdn.net/qq_43147940/article/details/84713480)
 *  2.1 先创建对应client项目，然后执行下面步骤
