@@ -47,6 +47,7 @@ Hello, world, from henry
 *      将 <s:element ref=“s:schema”/>下的<s:any/>改成 <s:any minOccurs=“2” maxOccurs=“2”/>
 *      将修改后保存的WeatherWS.wsdl文件放到client项目src对应包（本次包名是mypackage）目录下
 *      在client项目上右键，webservice=>Generate JavaCode from wsdl，即可生成对应调用代码
+*      WS接口网址：http://www.webxml.com.cn/zh_cn/index.aspx
 *  2.2 创建example包，创建调用类WeatherClient，编写相应调用代码即可
 ```java
 public class WeatherClient {
